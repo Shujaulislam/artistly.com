@@ -1,37 +1,46 @@
-"use client"
+"use client";
 
-import { useForm, SubmitHandler } from "react-hook-form"
-import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
-import { toast } from "sonner"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { FormSection } from "./FormSection"
-import { FileUpload } from "./FileUpload"
+import { useForm, SubmitHandler } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { toast } from "sonner";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { FormSection } from "./FormSection";
+import { FileUpload } from "./FileUpload";
 
-
-const categoriesList = ["Singer", "DJ", "Dancer", "Speaker"]
-const languagesList = ["English", "Hindi", "French", "Spanish"]
+const categoriesList = ["Singer", "DJ", "Dancer", "Speaker"];
+const languagesList = ["English", "Hindi", "French", "Spanish"];
 const feeRanges = [
   "₹10,000 - ₹25,000",
   "₹25,000 - ₹50,000",
-  "₹50,000 - ₹1,00,000"
-]
+  "₹50,000 - ₹1,00,000",
+];
 
 const schema = yup.object({
   name: yup.string().required("Name is required"),
-  bio: yup.string().required("Bio is required").min(50, "Bio must be at least 50 characters"),
-  categories: yup.array().of(yup.string()).min(1, "Select at least one category").required(),
-  languages: yup.array().of(yup.string()).min(1, "Select at least one language").required(),
+  bio: yup
+    .string()
+    .required("Bio is required")
+    .min(50, "Bio must be at least 50 characters"),
+  categories: yup
+    .array()
+    .of(yup.string())
+    .min(1, "Select at least one category")
+    .required(),
+  languages: yup
+    .array()
+    .of(yup.string())
+    .min(1, "Select at least one language")
+    .required(),
   feeRange: yup.string().required("Fee range is required"),
   location: yup.string().required("Location is required"),
-  profileImage: yup.mixed().nullable().notRequired()
-})
+  profileImage: yup.mixed().nullable().notRequired(),
+});
 
 interface ArtistFormValues extends yup.InferType<typeof schema> {}
-
 
 export function ArtistForm() {
   const {
@@ -41,7 +50,7 @@ export function ArtistForm() {
     getValues,
     watch,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm<ArtistFormValues>({
     resolver: yupResolver(schema) as any,
     defaultValues: {
@@ -51,28 +60,34 @@ export function ArtistForm() {
       languages: [],
       feeRange: "",
       location: "",
-      profileImage: null
-    }
-  })
+      profileImage: null,
+    },
+  });
 
   const onSubmit: SubmitHandler<ArtistFormValues> = (data) => {
-    console.log("Submitted data:", data)
-    toast.success("Artist submission received successfully")
-    reset()
-  }
+    console.log("Submitted data:", data);
+    toast.success("Artist submission received successfully");
+    reset(undefined, {
+      keepDirty: false,
+      keepErrors: false,
+      keepTouched: false,
+    });
+  };
 
-  const selectedCategories = watch("categories") || []
-  const selectedLanguages = watch("languages") || []
+  const selectedCategories = watch("categories") || [];
+  const selectedLanguages = watch("languages") || [];
 
   const toggleMultiSelect = (
     field: "categories" | "languages",
     value: string,
     checked: boolean
   ) => {
-    const current = getValues(field) || []
-    const updated = checked ? [...current, value] : current.filter((item) => item !== value)
-    setValue(field, updated, { shouldValidate: true })
-  }
+    const current = getValues(field) || [];
+    const updated = checked
+      ? [...current, value]
+      : current.filter((item) => item !== value);
+    setValue(field, updated, { shouldValidate: true });
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
@@ -82,13 +97,17 @@ export function ArtistForm() {
           <div>
             <label className="text-sm font-medium">Name</label>
             <Input {...register("name")} />
-            {errors.name && <p className="text-sm text-destructive">{errors.name.message}</p>}
+            {errors.name && (
+              <p className="text-sm text-destructive">{errors.name.message}</p>
+            )}
           </div>
 
           <div>
             <label className="text-sm font-medium">Bio</label>
             <Textarea {...register("bio")} className="min-h-[100px]" />
-            {errors.bio && <p className="text-sm text-destructive">{errors.bio.message}</p>}
+            {errors.bio && (
+              <p className="text-sm text-destructive">{errors.bio.message}</p>
+            )}
           </div>
         </div>
       </FormSection>
@@ -101,13 +120,21 @@ export function ArtistForm() {
               <Checkbox
                 id={`cat-${cat}`}
                 checked={selectedCategories.includes(cat)}
-                onCheckedChange={(checked) => toggleMultiSelect("categories", cat, checked as boolean)}
+                onCheckedChange={(checked) =>
+                  toggleMultiSelect("categories", cat, checked as boolean)
+                }
               />
-              <label htmlFor={`cat-${cat}`} className="text-sm">{cat}</label>
+              <label htmlFor={`cat-${cat}`} className="text-sm">
+                {cat}
+              </label>
             </div>
           ))}
         </div>
-        {errors.categories && <p className="text-sm text-destructive">{errors.categories.message}</p>}
+        {errors.categories && (
+          <p className="text-sm text-destructive">
+            {errors.categories.message}
+          </p>
+        )}
 
         <div className="grid grid-cols-2 gap-4 mt-6">
           {languagesList.map((lang) => (
@@ -115,13 +142,19 @@ export function ArtistForm() {
               <Checkbox
                 id={`lang-${lang}`}
                 checked={selectedLanguages.includes(lang)}
-                onCheckedChange={(checked) => toggleMultiSelect("languages", lang, checked as boolean)}
+                onCheckedChange={(checked) =>
+                  toggleMultiSelect("languages", lang, checked as boolean)
+                }
               />
-              <label htmlFor={`lang-${lang}`} className="text-sm">{lang}</label>
+              <label htmlFor={`lang-${lang}`} className="text-sm">
+                {lang}
+              </label>
             </div>
           ))}
         </div>
-        {errors.languages && <p className="text-sm text-destructive">{errors.languages.message}</p>}
+        {errors.languages && (
+          <p className="text-sm text-destructive">{errors.languages.message}</p>
+        )}
       </FormSection>
 
       {/* Fee and Location */}
@@ -135,16 +168,26 @@ export function ArtistForm() {
             >
               <option value="">Select a range</option>
               {feeRanges.map((range) => (
-                <option key={range} value={range}>{range}</option>
+                <option key={range} value={range}>
+                  {range}
+                </option>
               ))}
             </select>
-            {errors.feeRange && <p className="text-sm text-destructive">{errors.feeRange.message}</p>}
+            {errors.feeRange && (
+              <p className="text-sm text-destructive">
+                {errors.feeRange.message}
+              </p>
+            )}
           </div>
 
           <div>
             <label className="text-sm font-medium">Location</label>
             <Input {...register("location")} placeholder="City, State" />
-            {errors.location && <p className="text-sm text-destructive">{errors.location.message}</p>}
+            {errors.location && (
+              <p className="text-sm text-destructive">
+                {errors.location.message}
+              </p>
+            )}
           </div>
         </div>
       </FormSection>
@@ -161,5 +204,5 @@ export function ArtistForm() {
         Submit Application
       </Button>
     </form>
-  )
+  );
 }
