@@ -5,84 +5,192 @@
       "name": "Sarah Johnson",
       "category": "Singer",
       "location": "New York, NY",
-      "priceRange": "$300 - $450"
+      "priceRange": "$300 - $450",
+      "status": "approved"
     },
     {
       "id": "2",
       "name": "Michael Chen",
       "category": "DJ",
       "location": "Los Angeles, CA",
-      "priceRange": "$600 - $800"
+      "priceRange": "$600 - $800",
+      "status": "pending"
     },
     {
       "id": "3",
       "name": "Emma Davis",
       "category": "Dancer",
       "location": "Chicago, IL",
-      "priceRange": "$400 - $900"
+      "priceRange": "$400 - $900",
+      "status": "pending"
     },
     {
       "id": "4",
       "name": "James Wilson",
       "category": "Speaker",
       "location": "Miami, FL",
-      "priceRange": "$1200 - $1500"
+      "priceRange": "$1200 - $1500",
+      "status": "approved"
     },
     {
       "id": "5",
       "name": "Maria Garcia",
       "category": "Singer",
       "location": "Austin, TX",
-      "priceRange": "$450 - $950"
+      "priceRange": "$450 - $950",
+      "status": "approved"
     },
     {
       "id": "6",
       "name": "David Kim",
       "category": "DJ",
       "location": "Seattle, WA",
-      "priceRange": "$350 - $850"
+      "priceRange": "$350 - $850",
+      "status": "pending"
     },
     {
       "id": "7",
       "name": "Sophie Anderson",
       "category": "Singer",
       "location": "New York, NY",
-      "priceRange": "$800 - $1200"
+      "priceRange": "$800 - $1200",
+      "status": "approved"
     },
     {
       "id": "8",
       "name": "Alex Rivera",
       "category": "Dancer",
       "location": "Los Angeles, CA",
-      "priceRange": "$300 - $500"
+      "priceRange": "$300 - $500",
+      "status": "approved"
     },
     {
       "id": "9",
       "name": "Emily Wong",
       "category": "Speaker",
       "location": "Seattle, WA",
-      "priceRange": "$1500 - $2000"
+      "priceRange": "$1500 - $2000",
+      "status": "pending"
     },
     {
       "id": "10",
       "name": "Ryan Thompson",
       "category": "DJ",
       "location": "Miami, FL",
-      "priceRange": "$700 - $1100"
+      "priceRange": "$700 - $1100",
+      "status": "approved"
     },
     {
       "id": "11",
       "name": "Isabella Martinez",
       "category": "Dancer",
       "location": "Austin, TX",
-      "priceRange": "$250 - $450"
+      "priceRange": "$250 - $450",
+      "status": "approved"
     },
     {
       "id": "12",
       "name": "William Lee",
       "category": "Speaker",
       "location": "Chicago, IL",
-      "priceRange": "$900 - $1300"
+      "priceRange": "$900 - $1300",
+      "status": "approved"
+    },
+    {
+      "id": "13",
+      "name": "Olivia Brown",
+      "category": "Singer",
+      "location": "New York, NY",
+      "priceRange": "$500 - $700",
+      "status": "pending"
+    },
+    {
+      "id": "14",
+      "name": "Liam Smith",
+      "category": "DJ",
+      "location": "Los Angeles, CA",
+      "priceRange": "$400 - $600",
+      "status": "rejected"
+    },
+    {
+      "id": "15",
+      "name": "Ava Johnson",
+      "category": "Dancer",
+      "location": "Miami, FL",
+      "priceRange": "$350 - $550",
+      "status": "approved"
+    },
+    {
+      "id": "16",
+      "name": "Noah Garcia",
+      "category": "Speaker",
+      "location": "Seattle, WA",
+      "priceRange": "$1000 - $1400",
+      "status": "pending"
+    },
+    {
+      "id": "17",
+      "name": "Mia Davis",
+      "category": "Singer",
+      "location": "Chicago, IL",
+      "priceRange": "$600 - $900",
+      "status": "approved"
+    },
+    {
+      "id": "18",
+      "name": "Ethan Wilson",
+      "category": "DJ",
+      "location": "Austin, TX",
+      "priceRange": "$500 - $750",
+      "status": "approved"
+    },
+    {
+      "id": "19",
+      "name": "Charlotte Brown",
+      "category": "Dancer",
+      "location": "New York, NY",
+      "priceRange": "$400 - $600",
+      "status": "pending"
+    },
+    {
+      "id": "20",
+      "name": "Lucas Lee",
+      "category": "Speaker",
+      "location": "Los Angeles, CA",
+      "priceRange": "$1100 - $1600",
+      "status": "rejected"
+    },
+    {
+      "id": "21",
+      "name": "Grace Martinez",
+      "category": "Singer",
+      "location": "Miami, FL",
+      "priceRange": "$700 - $950",
+      "status": "approved"
+    },
+    {
+      "id": "22",
+      "name": "Benjamin Kim",
+      "category": "DJ",
+      "location": "Seattle, WA",
+      "priceRange": "$600 - $900",
+      "status": "pending"
+    },
+    {
+      "id": "23",
+      "name": "Ella Anderson",
+      "category": "Dancer",
+      "location": "Chicago, IL",
+      "priceRange": "$300 - $500",
+      "status": "approved"
+    },
+    {
+      "id": "24",
+      "name": "Alexander Thompson",
+      "category": "Speaker",
+      "location": "Austin, TX",
+      "priceRange": "$1300 - $1700",
+      "status": "rejected"
     }
   ]
 }
