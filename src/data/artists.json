@@ -1,0 +1,88 @@
+{
+  "artists": [
+    {
+      "id": "1",
+      "name": "Sarah Johnson",
+      "category": "Singer",
+      "location": "New York, NY",
+      "priceRange": "$300 - $450"
+    },
+    {
+      "id": "2",
+      "name": "Michael Chen",
+      "category": "DJ",
+      "location": "Los Angeles, CA",
+      "priceRange": "$600 - $800"
+    },
+    {
+      "id": "3",
+      "name": "Emma Davis",
+      "category": "Dancer",
+      "location": "Chicago, IL",
+      "priceRange": "$400 - $900"
+    },
+    {
+      "id": "4",
+      "name": "James Wilson",
+      "category": "Speaker",
+      "location": "Miami, FL",
+      "priceRange": "$1200 - $1500"
+    },
+    {
+      "id": "5",
+      "name": "Maria Garcia",
+      "category": "Singer",
+      "location": "Austin, TX",
+      "priceRange": "$450 - $950"
+    },
+    {
+      "id": "6",
+      "name": "David Kim",
+      "category": "DJ",
+      "location": "Seattle, WA",
+      "priceRange": "$350 - $850"
+    },
+    {
+      "id": "7",
+      "name": "Sophie Anderson",
+      "category": "Singer",
+      "location": "New York, NY",
+      "priceRange": "$800 - $1200"
+    },
+    {
+      "id": "8",
+      "name": "Alex Rivera",
+      "category": "Dancer",
+      "location": "Los Angeles, CA",
+      "priceRange": "$300 - $500"
+    },
+    {
+      "id": "9",
+      "name": "Emily Wong",
+      "category": "Speaker",
+      "location": "Seattle, WA",
+      "priceRange": "$1500 - $2000"
+    },
+    {
+      "id": "10",
+      "name": "Ryan Thompson",
+      "category": "DJ",
+      "location": "Miami, FL",
+      "priceRange": "$700 - $1100"
+    },
+    {
+      "id": "11",
+      "name": "Isabella Martinez",
+      "category": "Dancer",
+      "location": "Austin, TX",
+      "priceRange": "$250 - $450"
+    },
+    {
+      "id": "12",
+      "name": "William Lee",
+      "category": "Speaker",
+      "location": "Chicago, IL",
+      "priceRange": "$900 - $1300"
+    }
+  ]
+}
