@@ -82,6 +82,17 @@ src/
 
 ---
 
+## ⚙️ Data Handling
+
+- Built using the App Router (Next.js 15) which deprecates getStaticProps and getServerSideProps
+
+- The /artists page uses static data rendering with mock JSON (equivalent to getStaticProps)
+
+- The optional /dashboard page could use dynamic rendering if connected to real-time or authenticated data
+→ e.g. export const dynamic = "force-dynamic"
+
+- The onboarding form is client-only (form validation, submission, and local toast handling)
+
 ## 🔒 Notes
 
 - All logic is client-side with mock data (per assignment instructions)
