@@ -16,7 +16,7 @@ It demonstrates a real-world UI implementation using **Next.js App Router**, **T
 ## 🛠️ Tech Stack
 
 - **Next.js 15 (App Router)**
-- **React 18**
+- **React 19**
 - **Tailwind CSS**
 - **ShadCN UI**
 - **React Hook Form + Yup**
